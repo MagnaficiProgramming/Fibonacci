@@ -1,0 +1,32 @@
+// Problem: Program demonstrates the Fibonacci sequence
+
+import java.util.Scanner;
+
+public class Fibonacci{
+    public static void main(String[] args){
+        int response, x, y, z;
+
+        x = 0;
+        y = 1;
+
+        Scanner scan = new Scanner(System.in);
+
+        do{
+            System.out.print("Enter a number (up to 15): ");
+            response = scan.nextInt();
+        }while(response < 1 || response > 15);
+
+
+
+        for(int i = 1; i <= response; i++){
+            z = x + y;
+            System.out.print(z + "\t\t");
+            x = y;
+            y = z;
+
+            if(i % 5 == 0){
+                System.out.println();
+            }
+        }
+    }
+}
